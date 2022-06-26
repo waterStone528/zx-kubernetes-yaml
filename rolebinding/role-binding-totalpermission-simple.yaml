@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: totalpermission-simple
+  namespace: water
+subjects:
+  - kind: ServiceAccount
+    name: simple-service-account
+    namespace: water
+roleRef:
+  kind: Role
+  name: total-permission
+  apiGroup: rbac.authorization.k8s.io
