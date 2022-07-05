@@ -10,7 +10,6 @@ spec:
       image: busybox
       args:
         - /bin/sh
-        - -c
         - touch /tmp/healthy;
       livenessProbe:
         exec:
