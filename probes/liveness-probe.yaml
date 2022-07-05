@@ -10,11 +10,12 @@ spec:
       image: busybox
       args:
         - /bin/sh
-        - touch /tmp/healthy;
+        - -c
+        - touch /tmp/healthy; sleep 60;
       livenessProbe:
         exec:
           command:
             - cat
             - /tmp/healthy
-        initialDelaySeconds: 5
+        initialDelaySeconds: 50
         periodSeconds: 5
