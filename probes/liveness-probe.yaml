@@ -12,10 +12,10 @@ spec:
         - /bin/sh
         - -c
         - touch /tmp/healthy; sleep 60;
-      livenessProbe:
-        exec:
-          command:
-            - cat
-            - /tmp/healthy
-        initialDelaySeconds: 50
-        periodSeconds: 5
+#      livenessProbe:
+#        exec:
+#          command:
+#            - cat
+#            - /tmp/healthy
+#        initialDelaySeconds: 50
+#        periodSeconds: 5
