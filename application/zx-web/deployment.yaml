@@ -22,8 +22,6 @@ spec:
       - name: zx-web
         image: registry.cn-hangzhou.aliyuncs.com/k8s_water/zx-web:latest
         imagePullPolicy: IfNotPresent
-        imagePullSecrets:
-          - name: docker-regcred
         resources:
           limits:
             cpu: "1"
@@ -33,3 +31,5 @@ spec:
             memory: "200Mi"
         ports:
         - containerPort: 8080
+      imagePullSecrets:
+        - name: docker-regcred
