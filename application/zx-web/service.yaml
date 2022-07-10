@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: zx-web
 spec:
-  type: ClusterIp
+  type: ClusterIP
   selector:
     app: zx-web
   ports:
