@@ -13,4 +13,4 @@ spec:
               service:
                 name: zx-web
                 port:
-                  name: 80
+                  number: 80
