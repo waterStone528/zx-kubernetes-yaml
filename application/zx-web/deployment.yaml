@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: zx-web
-        image: registry.cn-hangzhou.aliyuncs.com/k8s_water/zx-web:latest
+        image: registry.cn-hangzhou.aliyuncs.com/k8s_water/zx-web-amd64:latest
         imagePullPolicy: Always
 #        resources:
 #          limits:
