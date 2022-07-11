@@ -9,10 +9,10 @@ spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /echo
             pathType: Prefix
             backend:
               service:
                 name: zx-web
                 port:
-                  number: 80
+                  number: 8080
