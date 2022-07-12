@@ -31,5 +31,19 @@ spec:
 #            memory: "200Mi"
         ports:
         - containerPort: 8080
+        livenessProb:
+          - initialDelaySeconds: 30
+            httpGet:
+              path: /actuator/health/liveness
+              port: 8080
+            periodSeconds: 10
+            failureThreshold: 1
+        readinessProb:
+          - initialDelaySeconds: 30
+            httpGet:
+              path: /actuator/health/readiness
+              port: 8080
+            periodSeconds: 10
+            failureThredshold: 1
       imagePullSecrets:
         - name: docker-regcred
